@@ -1,0 +1,15 @@
+version: '3.6'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: "mongodb-chuck"
+    networks:
+      - databases
+    volumes:
+      - "./_databases/mongodb/mongo-data:/data/db"
+    ports:
+      - 27017:27017
+    command: mongod
+networks:
+  databases:

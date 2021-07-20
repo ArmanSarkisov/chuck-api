@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "plugins": [
+      { "transform": "@zerollup/ts-transform-paths" }
+    ],
+    "skipLibCheck": true,
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "target": "ES6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*"],
+      "@app/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "ts-node": {
+    "files": true
+  },
+  "include": ["**/*"],
+  "typings": "src/shims/*.d.ts"
+}
